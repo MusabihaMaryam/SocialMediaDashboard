@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- BOXICONS LINK -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Notifications -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+
+    <title>Social Media Dashboard </title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  </head>
+  <body>
+    <!--Search box-->
+    
+<div class="sidebar">
+  <div class="logo-details">
+      <div class="logo_name">NavBar</div>
+      <i class='bx bx-menu' id="btn" ></i>
+  </div>
+  <ul class="nav-list">
+    <li>
+        <i class='bx bx-search' ></i>
+       <input type="text" placeholder="Search...">
+       <span class="tooltip">Search</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+       <span class="tooltip">Dashboard</span>
+    </li>
+    <li>
+     <a href="#">
+       <i class='bx bx-user' ></i>
+       <span class="links_name">User</span>
+     </a>
+     <span class="tooltip">User</span>
+   </li>
+   <li>
+     <a href="#">
+      <i class='bx bxs-doughnut-chart'></i>
+       <span class="links_name">Statistics</span>
+     </a>
+     <span class="tooltip">Statistics</span>
+   </li>
+   <li>
+     <a href="#">
+       <i class='bx bx-pie-chart-alt-2' ></i>
+       <span class="links_name">Analytics</span>
+     </a>
+     <span class="tooltip">Analytics</span>
+   </li>
+   <li>
+     <a href="#">
+      <i class='bx bx-data'></i>
+       <span class="links_name">Data Manager</span>
+     </a>
+     <span class="tooltip">Data</span>
+   </li>
+   <li>
+     <a href="#">
+      <i class='bx bx-trending-up'></i>
+       <span class="links_name">Trends</span>
+     </a>
+     <span class="tooltip">Trends</span>
+   </li>
+   <li>
+     <a href="#">
+       <i class='bx bx-heart' ></i>
+       <span class="links_name">Saved</span>
+     </a>
+     <span class="tooltip">Saved</span>
+   </li>
+   <li>
+     <a href="#">
+       <i class='bx bx-cog' ></i>
+       <span class="links_name">Setting</span>
+     </a>
+     <span class="tooltip">Setting</span>
+   </li>
+   <li class="profile">
+       <div class="profile-details">
+         <img src="images/hero-bg.jpg" alt="profileImg">
+         <div class="name_job">
+           <div class="name">Musabiha</div>
+           <div class="job">Web Intern</div>
+         </div>
+       </div>
+       <i class='bx bx-log-out' id="log_out" ></i>
+   </li>
+  </ul>
+</div>
+  
+        <!-- Notifications -->
+  
+    <nav>
+      <div class="logo"> </div>
+      <div class="icon" onclick="toggleNotifi()">
+        <img src="images/bell.png" alt=""> <span>2</span>
+      </div>
+      <div class="notifi-box" id="box">
+        <h2>Notifications <span>2</span></h2>
+        <div class="notifi-item">
+          <img src="images/avatar1.png" alt="img">
+          <div class="text">
+             <h4>Elias_Tom</h4>
+             <p>liked your reel</p>
+            </div> 
+        </div>
+  
+        <div class="notifi-item">
+          <img src="images/avatar2.png" alt="img">
+          <div class="text">
+             <h4>John_09</h4>
+             <p>commented on your video</p>
+            </div> 
+        </div>
+      </div>
+    </nav>
+    <!-- Notify -->
+  
+ 
+    <header class="header">
+      <div class="header__content">
+        <div>
+          <h1 class="heading--main">Social Media Dashboard</h1>
+          <p class="heading--sub">Total Followers: 53,007</p>
+        </div>
+       
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="card-grid card-grid--top">
+        <div class="card card--lg card--facebook">
+          <div class="card__handle">
+            <img
+              class="card__handle-icon"
+              src="./images/icon-facebook.svg"
+              alt=""
+              />
+              <span>@xyz09</span>
+          </div>
+          <div class="card__total">1987</div>
+          <div class="card__followers">Followers</div>
+          <div class="card__latest card__latest--up">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-up.svg"
+              alt="Up icon"
+            /><span>12 Today</span>
+          </div>
+        </div>
+
+        <div class="card card--lg card--twitter">
+          <div class="card__handle">
+            <img
+              class="card__handle-icon"
+              src="./images/icon-twitter.svg"
+              alt=""
+            /><span>@xyz09</span>
+          </div>
+          <div class="card__total">1044</div>
+          <div class="card__followers">Followers</div>
+          <div class="card__latest card__latest--up">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-up.svg"
+              alt="Up icon"
+            /><span>99 Today</span>
+          </div>
+        </div>
+
+        <div class="card card--lg card--instagram">
+          <div class="card__handle">
+            <img
+              class="card__handle-icon"
+              src="./images/icon-instagram.svg"
+              alt=""
+            />
+            <span>itsxyz07</span>
+          </div>
+          <div class="card__total">11k</div>
+          <div class="card__followers">Followers</div>
+          <div class="card__latest card__latest--up">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-up.svg"
+              alt="Up icon"
+            /><span>1099 Today</span>
+          </div>
+        </div>
+
+        <div class="card card--lg card--youtube">
+          <div class="card__handle">
+            <img
+              class="card__handle-icon"
+              src="./images/icon-youtube.svg"
+              alt=""
+            />
+            <span>XYZ.G</span>
+          </div>
+          <div class="card__total">8239</div>
+          <div class="card__followers">Subscribers</div>
+          <div class="card__latest card__latest--down">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-down.svg"
+              alt="Down icon"
+            /><span>144 Today</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="heading--secondary">Overview - Today</h2>
+
+      <div class="card-grid card-grid--bottom">
+        <div class="card card--sm">
+          <span class="card__daily-result">Page Views</span>
+          <span class="card__daily-icon"
+            ><img src="./images/icon-facebook.svg" alt="Facebook icon"
+          /></span>
+          <span class="card__daily-total">87</span>
+          <div class="card__daily-change card__daily-change--up">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-up.svg"
+              alt="Up icon"
+            />
+            <span>3%</span>
+          </div>
+        </div>
+
+        <div class="card card--sm">
+          <span class="card__daily-result">Likes</span>
+          <span class="card__daily-icon"
+            ><img src="./images/icon-facebook.svg" alt="Facebook icon"
+          /></span>
+          <span class="card__daily-total">52</span>
+          <div class="card__daily-change card__daily-change--down">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-down.svg"
+              alt="Down icon"
+            />
+            <span>2%</span>
+          </div>
+        </div>
+
+        <div class="card card--sm">
+          <span class="card__daily-result">Likes</span>
+          <span class="card__daily-icon"
+            ><img src="./images/icon-instagram.svg" alt="Instagram icon"
+          /></span>
+          <span class="card__daily-total">5462</span>
+          <div class="card__daily-change card__daily-change--up">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-up.svg"
+              alt="Up icon"
+            />
+            <span>2257%</span>
+          </div>
+        </div>
+
+        <div class="card card--sm">
+          <span class="card__daily-result">Profile Views</span>
+          <span class="card__daily-icon"
+            ><img src="./images/icon-instagram.svg" alt="Instagram icon"
+          /></span>
+          <span class="card__daily-total">52k</span>
+          <div class="card__daily-change card__daily-change--up">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-up.svg"
+              alt="Up icon"
+            />
+            <span>1375%</span>
+          </div>
+        </div>
+
+        <div class="card card--sm">
+          <span class="card__daily-result">Retweets</span>
+          <span class="card__daily-icon"
+            ><img src="./images/icon-twitter.svg" alt="Twitter icon"
+          /></span>
+          <span class="card__daily-total">117</span>
+          <div class="card__daily-change card__daily-change--up">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-up.svg"
+              alt="Up icon"
+            />
+            <span>303%</span>
+          </div>
+        </div>
+
+        <div class="card card--sm">
+          <span class="card__daily-result">Likes</span>
+          <span class="card__daily-icon"
+            ><img src="./images/icon-twitter.svg" alt="Twitter icon"
+          /></span>
+          <span class="card__daily-total">507</span>
+          <div class="card__daily-change card__daily-change--up">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-up.svg"
+              alt="Up icon"
+            />
+            <span>553%</span>
+          </div>
+        </div>
+
+        <div class="card card--sm">
+          <span class="card__daily-result">Likes</span>
+          <span class="card__daily-icon"
+            ><img src="./images/icon-youtube.svg" alt="YouTube icon"
+          /></span>
+          <span class="card__daily-total">107</span>
+          <div class="card__daily-change card__daily-change--down">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-down.svg"
+              alt="Down icon"
+            />
+            <span>19%</span>
+          </div>
+        </div>
+
+        <div class="card card--sm">
+          <span class="card__daily-result">Total Views</span>
+          <span class="card__daily-icon"
+            ><img src="./images/icon-youtube.svg" alt="YouTube icon"
+          /></span>
+          <span class="card__daily-total">1407</span>
+          <div class="card__daily-change card__daily-change--down">
+            <img
+              class="card__trend-icon"
+              src="./images/icon-down.svg"
+              alt="Down icon"
+            />
+            <span>12%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------------------------------------CHART JS--------------------------------------------->
+ 
+    <div class="chart-container">
+      <h2>Trend Statistics</h2>
+      <canvas id="chart"></canvas>
+    </div>
+  
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script type="text/javascript" src="js/chart.js"></script>
+     <script src="js/script.js"></script>
+  </body>
+</html>
